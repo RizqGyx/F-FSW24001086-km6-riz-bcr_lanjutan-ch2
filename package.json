@@ -1,9 +1,9 @@
 {
-  "name": "binar-fsw-challenge-04",
+  "name": "binar-car-rental-fsw1-ch02",
   "version": "1.0.0",
   "description": "Project HTTP Server dan DOM",
   "main": "server/index.js",
-  "author": "Fikri Rahmat Nurhidayat <fnurhidayat@binar.co.id>",
+  "author": "Muhammad Rizki <mhdrizky32@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
