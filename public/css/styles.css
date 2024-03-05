@@ -8,6 +8,20 @@
   font-weight: 300;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
 /* Global Uses Start */
 #our-services,
 #why-us,

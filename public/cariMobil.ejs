@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Muhammad Rizki" />
+    <meta name="description" content="Lorem ipsum dolor sit amet" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
+    />
+    <!-- Bagian Judul -->
+    <title>BCR | Binar Car Rental</title>
+
+    <!-- Bagian Icon -->
+    <link rel="icon" href="./images/icon.png" />
+
+    <!-- Example CSS -->
+    <link href="./css/styles.css" rel="stylesheet" />
+
+    <!-- Bagian CSS Untuk Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+
+    <!-- Bagian Link Untuk Icon Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Bagian Header -->
+    <header class="py-3" id="myHeader">
+      <div class="header_wrapper">
+        <!-- Bagian Desktop Navigation -->
+        <a href="#"><img src="./images/logo.png" alt="Logo" class="logo" /></a>
+        <nav>
+          <a href="#our-services">Our Services</a>
+          <a href="#why-us">Why Us</a>
+          <a href="#testimonial">Testimonial</a>
+          <a href="#faq">FAQ</a>
+          <a href="#register" class="green-box">Register</a>
+        </nav>
+
+        <!-- Bagian Mobile Navigation -->
+        <div class="menu-toogle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="menu-curtain">
+          <div class="title-curtain p-3"><h1>BCR</h1></div>
+          <ul>
+            <li><a href="#our-services" class="close-menu">Our Services</a></li>
+            <li><a href="#why-us" class="close-menu">Why Us</a></li>
+            <li><a href="#testimonial" class="close-menu">Testimonial</a></li>
+            <li><a href="#faq" class="close-menu">FAQ</a></li>
+            <li>
+              <a href="#register" class="green-box close-menu">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Bagian Main Content -->
+    <main>
+      <!-- Bagian Hero Section -->
+      <section class="hero-section">
+        <article>
+          <h1 class="content-title">
+            Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)
+          </h1>
+          <p class="content-paragraph">
+            Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas
+            terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
+            untuk sewa mobil selama 24 jam.
+          </p>
+          <a href="#sewa" class="content-button">Mulai Sewa Mobil</a>
+        </article>
+        <img src="./images/img_hero.png" alt="Hero Car" />
+      </section>
+
+      <section class="filters">
+        <div class="container">
+          <div class="filters">
+            <div class="form-group">
+              <label for="tipeDriver">Tipe Driver:</label>
+              <select id="tipeDriver" class="form-control">
+                <option value="">Semua</option>
+                <option value="denganSupir">Dengan Supir</option>
+                <option value="lepasKunci">Lepas Kunci</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="waktuSewa">Waktu Sewa:</label>
+              <input type="date" id="waktuSewa" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label for="jumlahPenumpang">Jumlah Penumpang:</label>
+              <input type="number" id="jumlahPenumpang" class="form-control" />
+            </div>
+            <button id="filterButton" class="btn btn-primary">Filter</button>
+          </div>
+          <div id="result">
+            <!-- Hasil filter akan ditampilkan di sini -->
+          </div>
+        </div>
+      </section>
+
+      <button id="load-btn">Load</button>
+      <button id="clear-btn">Clear</button>
+      <section id="cars-container"></section>
+    </main>
+
+    <!-- Bagian Footer -->
+    <footer>
+      <div class="footer-information">
+        <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+        <p>binarcarrental@gmail.com</p>
+        <p>081-233-334-808</p>
+      </div>
+      <div class="footer-navigation">
+        <a href="#our-services">Our Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#testimonial">Testimonial</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-sosmed">
+        <p>Connect with us</p>
+        <div class="sosmed">
+          <a href="#facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#mail"><i class="fas fa-mail-bulk"></i></a>
+          <a href="#twitch"><i class="fab fa-twitch"></i></a>
+        </div>
+      </div>
+      <div class="footer-brand">
+        <p>Copyright Binar 2022</p>
+        <img src="././images/logo.png" alt="Logo" class="logo" />
+      </div>
+    </footer>
+
+    <!-- Example Javascript -->
+    <script type="text/javascript" src="./scripts/binar.js"></script>
+    <script type="text/javascript" src="./scripts/app.example.js"></script>
+    <script type="text/javascript" src="./scripts/car.example.js"></script>
+    <script type="text/javascript" src="./scripts/main.example.js"></script>
+
+    <!-- Script JS Untuk Bootstrap -->
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+
+    <!-- Script Sendiri Untuk Hamburger Navigation -->
+    <script src="../public/scripts/hamburger.js"></script>
+  </body>
+</html>
