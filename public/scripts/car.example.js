@@ -40,13 +40,26 @@ class Car {
   }
 
   render() {
+    const rentPerDayFormatted = new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      maximumFractionDigits: 0,
+    }).format(this.rentPerDay);
+
     return `
-      <p>id: <b>${this.id}</b></p>
-      <p>plate: <b>${this.plate}</b></p>
-      <p>manufacture: <b>${this.manufacture}</b></p>
-      <p>model: <b>${this.model}</b></p>
-      <p>available at: <b>${this.availableAt}</b></p>
-      <img src="${this.image}" alt="${this.manufacture}" width="64px">
-    `;
+    <div class="card d-flex flex-column h-100">
+      <img class="card-img-top img-fluid" id="car-img" src="${this.image}" alt="${this.manufacture}" />
+      <div class="card-body">
+          <h2 class="card-title fw-bold" id="car-name">${this.manufacture} ${this.model}/${this.type}</h2>
+          <h4 class="card-sub-title fw-bold" id="car-rent">${rentPerDayFormatted} / hari</h4>
+          <p class="card-text">${this.description}</p>
+          <ul class="list-group car-list">
+              <li class="list-group-item"><i><img src="./images/users.png" alt="user-icon" /></i> ${this.capacity} Orang</li>
+              <li class="list-group-item"><i><img src="./images/fi_settings.svg" alt="user-icon" /></i> ${this.transmission}</li>
+              <li class="list-group-item"><i><img src="./images/calendar.png" alt="user-icon" /></i> Tahun ${this.year}</li>
+          </ul>
+      </div>
+      <a href="cars?id=${this.id}" class="mt-auto d-block w-100 py-2 nav-link bg-success success-color rounded text-white fw-bold text-center">Pilih Mobil</a>
+    </div>`;
   }
 }

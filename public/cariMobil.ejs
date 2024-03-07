@@ -80,41 +80,72 @@
             terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
             untuk sewa mobil selama 24 jam.
           </p>
-          <a href="#sewa" class="content-button">Mulai Sewa Mobil</a>
         </article>
         <img src="./images/img_hero.png" alt="Hero Car" />
       </section>
 
-      <section class="filters">
+      <section id="filters" class="position-relative bg-light p-3">
         <div class="container">
-          <div class="filters">
-            <div class="form-group">
-              <label for="tipeDriver">Tipe Driver:</label>
-              <select id="tipeDriver" class="form-control">
-                <option value="">Semua</option>
+          <div class="filters row align-items-end">
+            <div class="mb-3 col">
+              <label class="mb-1" for="tipeDriver">Tipe Driver:</label>
+              <select
+                id="tipeDriver"
+                class="form-control border border-1 border-secondary-subtle p-2 px-4"
+              >
+                <option value="default" disabled selected>
+                  Pilih Tipe Driver
+                </option>
                 <option value="denganSupir">Dengan Supir</option>
                 <option value="lepasKunci">Lepas Kunci</option>
               </select>
             </div>
-            <div class="form-group">
-              <label for="waktuSewa">Waktu Sewa:</label>
-              <input type="date" id="waktuSewa" class="form-control" />
+            <div class="mb-3 col">
+              <label class="mb-1" for="tanggalSewa">Tanggal:</label>
+              <input
+                type="date"
+                id="tanggalSewa"
+                placeholder="Pilih Tanggal"
+                class="form-control border border-1 border-secondary-subtle p-2 px-4"
+              />
             </div>
-            <div class="form-group">
-              <label for="jumlahPenumpang">Jumlah Penumpang:</label>
-              <input type="number" id="jumlahPenumpang" class="form-control" />
+            <div class="mb-3 col">
+              <label class="mb-1" for="waktuSewa">Waktu Jemput/Ambil:</label>
+              <select
+                id="waktuSewa"
+                class="form-control border border-1 border-secondary-subtle p-2 px-4"
+              >
+                <option value="default" disabled selected>Pilih Waktu</option>
+                <option value="08:00">08.00 WIB</option>
+                <option value="09:00">09.00 WIB</option>
+                <option value="10:00">10.00 WIB</option>
+                <option value="11:00">11.00 WIB</option>
+                <option value="12:00">12.00 WIB</option>
+              </select>
             </div>
-            <button id="filterButton" class="btn btn-primary">Filter</button>
-          </div>
-          <div id="result">
-            <!-- Hasil filter akan ditampilkan di sini -->
+            <div class="mb-3 col">
+              <label class="mb-1" for="jumlahPenumpang"
+                >Jumlah Penumpang (optional):</label
+              >
+              <input
+                type="number"
+                id="jumlahPenumpang"
+                placeholder="Jumlah Penumpang"
+                class="form-control border border-1 border-secondary-subtle p-2 px-4"
+              />
+            </div>
+            <div class="mb-3 col-md-1 text-center px-2">
+              <button id="filterButton" class="green-box btn">
+                Cari Mobil
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      <button id="load-btn">Load</button>
-      <button id="clear-btn">Clear</button>
-      <section id="cars-container"></section>
+      <!-- <button id="load-btn">Load</button>
+      <button id="clear-btn">Clear</button> -->
+      <section id="cars-container" class="row align-items-stretch"></section>
     </main>
 
     <!-- Bagian Footer -->
@@ -156,6 +187,6 @@
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
 
     <!-- Script Sendiri Untuk Hamburger Navigation -->
-    <script src="../public/scripts/hamburger.js"></script>
+    <script src="scripts/hamburger.js"></script>
   </body>
 </html>

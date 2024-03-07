@@ -19,6 +19,23 @@ app.get("/bootstrap-5.3.3-dist/css/bootstrap.min.css", (req, res) => {
   );
 });
 
+app.get("/bootstrap-5.3.3-dist/js/bootstrap.min.js", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "../bootstrap-5.3.3-dist/js/bootstrap.min.js"),
+    {
+      headers: {
+        "Content-Type": "text/javascript",
+      },
+    },
+    (err) => {
+      if (err) {
+        console.error(err);
+        res.status(404).end();
+      }
+    }
+  );
+});
+
 // Mengatur mesin template EJS dan folder views
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../public"));
