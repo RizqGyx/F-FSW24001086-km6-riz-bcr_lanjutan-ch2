@@ -357,6 +357,11 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   object-fit: cover;
 }
 
+.card-title,
+.card-text {
+  font-size: 0.875rem;
+}
+
 /* Main Section Style End */
 
 /* Footer Section Style Start */

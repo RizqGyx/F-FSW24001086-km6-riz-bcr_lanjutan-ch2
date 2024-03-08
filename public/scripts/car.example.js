@@ -50,13 +50,13 @@ class Car {
     <div class="card d-flex flex-column h-100">
       <img class="card-img-top img-fluid" id="car-img" src="${this.image}" alt="${this.manufacture}" />
       <div class="card-body">
-          <h2 class="card-title fw-bold" id="car-name">${this.manufacture} ${this.model}/${this.type}</h2>
-          <h4 class="card-sub-title fw-bold" id="car-rent">${rentPerDayFormatted} / hari</h4>
-          <p class="card-text">${this.description}</p>
+          <h3 class="card-title" id="car-name">${this.manufacture} ${this.model}/${this.type}</h3>
+          <h2 class="card-sub-title fw-bold fs-6" id="car-rent">${rentPerDayFormatted} / hari</h2>
+          <p class="card-text fw-light">${this.description}</p>
           <ul class="list-group car-list">
               <li class="list-group-item"><i><img src="./images/users.png" alt="user-icon" /></i> ${this.capacity} Orang</li>
-              <li class="list-group-item"><i><img src="./images/fi_settings.svg" alt="user-icon" /></i> ${this.transmission}</li>
-              <li class="list-group-item"><i><img src="./images/calendar.png" alt="user-icon" /></i> Tahun ${this.year}</li>
+              <li class="list-group-item"><i><img src="./images/settings.png" alt="setting-icon" /></i> ${this.transmission}</li>
+              <li class="list-group-item"><i><img src="./images/calendar.png" alt="calender-icon" /></i> Tahun ${this.year}</li>
           </ul>
       </div>
       <a href="cars?id=${this.id}" class="mt-auto d-block w-100 py-2 nav-link bg-success success-color rounded text-white fw-bold text-center">Pilih Mobil</a>
