@@ -245,7 +245,7 @@ label {
 }
 
 #tanggalSewa {
-  background-image: url("../images/calender.png");
+  background-image: url("../images/calendar.png");
 }
 
 input[type="date"] {
@@ -465,7 +465,7 @@ footer {
     flex-direction: column;
   }
 
-  #filterButton {
+  #load-btn {
     width: 100%;
   }
 
