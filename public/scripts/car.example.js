@@ -48,18 +48,33 @@ class Car {
 
     return `
     <div class="card d-flex flex-column h-100">
-      <img class="card-img-top img-fluid" id="car-img" src="${this.image}" alt="${this.manufacture}" />
+      <img id="car-img" class="card-img-top img-fluid" src="${
+        this.image
+      }" alt="${this.manufacture}" />
       <div class="card-body">
-          <h3 class="card-title" id="car-name">${this.manufacture} ${this.model}/${this.type}</h3>
-          <h2 class="card-sub-title fw-bold fs-6" id="car-rent">${rentPerDayFormatted} / hari</h2>
-          <p class="card-text fw-light">${this.description}</p>
+          <h3 id="car-name" class="card-title">${this.manufacture} ${
+      this.model
+    } / ${this.type}</h3>
+          <h2 id="car-rent" class="card-sub-title fw-bold fs-6">${rentPerDayFormatted} / hari</h2>
+          <p class="card-text fw-light">${
+            this.description ||
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus, mauris ac suscipit rutrum, tellus dolor fermentum diam, nec tristique mi nunc mattis leo."
+          }</p>
           <ul class="list-group car-list">
-              <li class="list-group-item"><i><img src="./images/users.png" alt="user-icon" /></i> ${this.capacity} Orang</li>
-              <li class="list-group-item"><i><img src="./images/settings.png" alt="setting-icon" /></i> ${this.transmission}</li>
-              <li class="list-group-item"><i><img src="./images/calendar.png" alt="calender-icon" /></i> Tahun ${this.year}</li>
+              <li class="list-group-item"><i><img src="./images/users.png" alt="user-icon" /></i><span class="mx-3">${
+                this.capacity
+              } Orang</span></li>
+              <li class="list-group-item"><i><img src="./images/settings.png" alt="setting-icon" /></i><span class="mx-3">${
+                this.transmission
+              }</span></li>
+              <li class="list-group-item"><i><img src="./images/calendar.png" alt="calender-icon" /></i><span class="mx-3">Tahun ${
+                this.year
+              }</span></li>
           </ul>
       </div>
-      <a href="cars?id=${this.id}" class="mt-auto d-block w-100 py-2 nav-link bg-success success-color rounded text-white fw-bold text-center">Pilih Mobil</a>
+      <a href="cars?id=${
+        this.id
+      }" class="mt-auto d-block w-100 py-2 nav-link bg-success success-color rounded text-white fw-bold text-center">Pilih Mobil</a>
     </div>`;
   }
 }
