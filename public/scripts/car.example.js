@@ -61,13 +61,13 @@ class Car {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus, mauris ac suscipit rutrum, tellus dolor fermentum diam, nec tristique mi nunc mattis leo."
           }</p>
           <ul class="list-group car-list">
-              <li class="list-group-item"><i><img src="./images/users.png" alt="user-icon" /></i><span class="mx-3">${
+              <li class="list-group-item border-0"><i><img src="./images/users.png" alt="user-icon" /></i><span class="mx-3">${
                 this.capacity
               } Orang</span></li>
-              <li class="list-group-item"><i><img src="./images/settings.png" alt="setting-icon" /></i><span class="mx-3">${
+              <li class="list-group-item border-0"><i><img src="./images/settings.png" alt="setting-icon" /></i><span class="mx-3">${
                 this.transmission
               }</span></li>
-              <li class="list-group-item"><i><img src="./images/calendar.png" alt="calender-icon" /></i><span class="mx-3">Tahun ${
+              <li class="list-group-item border-0"><i><img src="./images/calendar.png" alt="calender-icon" /></i><span class="mx-3">Tahun ${
                 this.year
               }</span></li>
           </ul>
