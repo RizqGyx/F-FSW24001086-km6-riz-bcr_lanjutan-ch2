@@ -74,7 +74,7 @@ class Car {
       </div>
       <a href="cars?id=${
         this.id
-      }" class="mt-auto d-block w-100 py-2 nav-link bg-success success-color rounded text-white fw-bold text-center">Pilih Mobil</a>
+      }" class="mt-auto d-block w-100 py-2 nav-link bg-success success-color rounded text-white fw-bold text-center" target="_blank">Pilih Mobil</a>
     </div>`;
   }
 }
